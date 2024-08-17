@@ -2,11 +2,33 @@
 <html lang="en">
 
   <head>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+
+    
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="scripts/index.js"></script>
+    
+    <link rel="stylesheet" href="" id="theme" />
+
+    <script>
+      const tg = window.Telegram.WebApp;
+      console.log(tg.colorScheme); 
+      if (tg.colorScheme === 'light') {
+          // Load the light mode CSS
+          const themeLink = document.getElementById('theme');
+          themeLink.href = 'css/index-light.css';
+      } else {
+          // Load the dark mode CSS (or default if not dark)
+          const themeLink = document.getElementById('theme');
+          themeLink.href = 'css/index-light.css';
+      }
+    </script>
+
   </head>
 
   <body>
@@ -29,11 +51,9 @@
 
       <div class="server">
         <img src="assets/server_icon.png" alt="img" />
-        <span class="server-name">Server 1</span>
+        <span class="server-name">Server 3</span>
         <span class="server-status">Online</span>
       </div>
-
-    <script src="script.js"></script>
 
   </body>
   
